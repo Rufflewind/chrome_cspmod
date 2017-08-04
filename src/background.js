@@ -158,5 +158,5 @@ chrome.storage.sync.get({config: ""}, function(items) {
 chrome.runtime.onMessage.addListener(messageHandler);
 chrome.webRequest.onHeadersReceived.addListener(requestProcessor, {
     urls: ["*://*/*"],
-    types: ["main_frame"]
+    types: ["main_frame", "sub_frame"]
 }, ["blocking", "responseHeaders"]);
