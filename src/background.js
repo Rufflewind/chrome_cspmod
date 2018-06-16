@@ -113,6 +113,7 @@ function requestProcessor(details) {
             var header = headers[j];
             var name = header.name.toLowerCase();
             if (name !== "content-security-policy" &&
+                name !== "content-security-policy-report-only" &&
                 name !== "x-webkit-csp") {
                 continue;
             }
